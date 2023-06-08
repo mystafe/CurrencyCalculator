@@ -3,7 +3,7 @@ let currentRate = 23.311351;
 const getUsdCurrency = async function () {
   let dollarCurrency = null;
   const API_KEY = "c512c4492d76c175cba76489bee946b0";
-  const baseUrl = "https://api.exchangeratesapi.io/v1";
+  const baseUrl = "http://api.exchangeratesapi.io/v1";
   const access_key = API_KEY;
   const myprom = new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
@@ -50,7 +50,7 @@ const findHistorical = () => {
 
   const myOldProm = new Promise((resolve, reject) => {
     const API_KEY = "c512c4492d76c175cba76489bee946b0";
-    const url = "https://api.exchangeratesapi.io/v1/" + oldDate;
+    const url = "http://api.exchangeratesapi.io/v1/" + oldDate;
     const access_key = API_KEY;
     const symbols = "USD,TRY";
     const xhr = new XMLHttpRequest();
@@ -131,7 +131,7 @@ getCurrency = async function () {
   const currencyBase = document.getElementById("currency-select").value;
   console.log(currencyBase);
   const API_KEY = "c512c4492d76c175cba76489bee946b0";
-  const baseUrl = "https://api.exchangeratesapi.io/v1";
+  const baseUrl = "http://api.exchangeratesapi.io/v1";
   const access_key = API_KEY;
   const myprom = new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
@@ -176,7 +176,7 @@ const findHistoricalCurrency = () => {
   console.log(baseCurrency);
   const myOldProm = new Promise((resolve, reject) => {
     const API_KEY = "c512c4492d76c175cba76489bee946b0";
-    const url = "https://api.exchangeratesapi.io/v1/" + oldDate;
+    const url = "http://api.exchangeratesapi.io/v1/" + oldDate;
     const access_key = API_KEY;
 
     const xhr = new XMLHttpRequest();
