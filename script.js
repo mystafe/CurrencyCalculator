@@ -6,7 +6,7 @@ const getUsdCurrency = async function () {
   const baseUrl = "https://api.exchangeratesapi.io/v1";
   const access_key = API_KEY;
   const myprom = new Promise((resolve, reject) => {
-    const xhr = new XMLhttpsRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open(
       "GET",
       baseUrl + "/latest?" + "access_key=" + access_key + "&symbols=TRY,USD"
@@ -53,7 +53,7 @@ const findHistorical = () => {
     const url = "https://api.exchangeratesapi.io/v1/" + oldDate;
     const access_key = API_KEY;
     const symbols = "USD,TRY";
-    const xhr = new XMLhttpsRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open("GET", url + "?access_key=" + access_key + "&symbols=" + symbols);
     xhr.onload = () => {
       if (xhr.status === 200) {
@@ -134,7 +134,7 @@ getCurrency = async function () {
   const baseUrl = "https://api.exchangeratesapi.io/v1";
   const access_key = API_KEY;
   const myprom = new Promise((resolve, reject) => {
-    const xhr = new XMLhttpsRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open("GET", baseUrl + "/latest?" + "access_key=" + access_key);
 
     xhr.onload = () => {
@@ -179,7 +179,7 @@ const findHistoricalCurrency = () => {
     const url = "https://api.exchangeratesapi.io/v1/" + oldDate;
     const access_key = API_KEY;
 
-    const xhr = new XMLhttpsRequest();
+    const xhr = new XMLHttpRequest();
     xhr.open("GET", url + "?access_key=" + access_key);
     xhr.onload = () => {
       if (xhr.status === 200) {
